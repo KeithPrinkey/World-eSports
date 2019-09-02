@@ -1,117 +1,90 @@
-
 <!DOCTYPE html>
 <html>
+
+<br>
 <head>
-<span style="background-color:Tomato;">Lorem ipsum..</span>
-<span style="color:red;background-color:#ee9600"></span>
-<h1 style="color:rgb(0,255,255)">Guessing Game</h1>
-<img src="/home/keithprinkey/the_odin_project/google-homepage/WeHL.png" alt="world e hockey">
-
     <style>
-        html {
-            font-family: sans-serif;
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
         }
 
-        body {
-            width: 50%;
-            max-width: 800px;
-            min-width: 480px;
-            margin: 0 auto;
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
         }
 
-        .lastResult {
-            color: white;
-            padding: 3px;
+        tr:nth-child(even) {
+            background-color: #dddddd;
         }
     </style>
 </head>
 
 <body>
     
-    <p>This is a cool little Game Guessing to play with</p>
+    <h2>HTML Table</h2>
+    <iframe src="https://form.jotform.com/91000741203135" width="800" height="800"></iframe>
+    <table>
+        <tr>
+            <th>Discord Tag</th>
+            <th>Name</th>
+            <th>PSN</th>
+        </tr>
+        <tr>
+            <td>Bestthereis1983</td>
+            <td>Maria Anders</td>
+            <td>Bestthereis1983</td>
+        </tr>
+        <tr>
+            <td>Bestthereis1983  </td>
+            <td>Francisco Chang</td>
+            <td>Bestthereis1983</td>
+        </tr>
+        <tr>
+            <td>Bestthereis1983 </td>
+            <td>Roland Mendel</td>
+            <td>Bestthereis1983</td>
+        </tr>
+        <tr>
+            <td>Bestthereis1983 </td>
+            <td>Helen Bennett</td>
+            <td>Bestthereis1983</td>
+        </tr>
+        <tr>
+            <td>Bestthereis1983</td>
+            <td>Yoshi Tannamuri</td>
+            <td>Bestthereis1983</td>
+        </tr>
+        <tr>
+            <td>Bestthereis1983</td>
+            <td>Giovanni Rovelli</td>
+            <td>Bestthereis1983</td>
+        </tr>
+    </table>
 
-    <div class="form">
-        <label for="guessField">Enter a guess: </label><input type="text" id="guessField" class="guessField">
-        <input type="submit" value="Submit guess" class="guessSubmit">
-    </div>
+</body>
 
-    <div class="resultParas">
-        <p class="guesses"></p>
-        <p class="lastResult"></p>
-        <p class="lowOrHi"></p>
-    </div>
-<script>
+</html>
 
-    // 
-    guessField.focus();
-    let randomNumber = Math.floor(Math.random() * 100) + 1;
+        </head>
+        <body>
+            
+        </body>
+        </html>
+            <td>Magazzini Alimentari Riuniti</td>
+            <td>Giovanni Rovelli</td>
+            <td>Italy</td>
+        </tr>
+    </table>
 
-    const guesses = document.querySelector('.guesses');
-    const lastResult = document.querySelector('.lastResult');
-    const lowOrHi = document.querySelector('.lowOrHi');
-
-    const guessSubmit = document.querySelector('.guessSubmit');
-    const guessField = document.querySelector('.guessField');
-
-    let guessCount = 1;
-    let resetButton;
-    function checkGuess() {
-            let userGuess = Number(guessField.value);
-            if (guessCount === 1) {
-                guesses.textContent = 'Previous guesses: ';
-            }
-            guesses.textContent += userGuess + ' ';
-
-            if (userGuess === randomNumber) {
-                lastResult.textContent = 'Congratulations! You got it right!';
-                lastResult.style.backgroundColor = 'green';
-                lowOrHi.textContent = '';
-                setGameOver();
-            } else if (guessCount === 10) {
-                lastResult.textContent = '!!!GAME OVER!!!';
-                setGameOver();
-            } else {
-                lastResult.textContent = 'Wrong!';
-                lastResult.style.backgroundColor = 'red';
-                if (userGuess < randomNumber) {
-                    lowOrHi.textContent = 'Last guess was too low!';
-                } else if (userGuess > randomNumber) {
-                    lowOrHi.textContent = 'Last guess was too high!';
-                }
-            }
-
-            guessCount++;
-            guessField.value = '';
-            guessField.focus();
-        }
-        guessSubmit.addEventListener('click', checkGuess);
-        function setGameOver() {
-                guessField.disabled = true;
-                guessSubmit.disabled = true;
-                resetButton = document.createElement('button');
-                resetButton.textContent = 'Start new game';
-                document.body.appendChild(resetButton);
-                resetButton.addEventListener('click', resetGame);
-            }
-            function resetGame() {
-                    guessCount = 1;
-
-                    const resetParas = document.querySelectorAll('.resultParas p');
-                    for (let i = 0; i < resetParas.length; i++) {
-                        resetParas[i].textContent = '';
-                    }
-
-                    resetButton.parentNode.removeChild(resetButton);
-
-                    guessField.disabled = false;
-                    guessSubmit.disabled = false;
-                    guessField.value = '';
-                    guessField.focus();
-
-                    lastResult.style.backgroundColor = 'white';
-
-                    randomNumber = Math.floor(Math.random() * 100) + 1;
-                }
-</script>
 </body>
 </html>
+
+
+
+<img src="/home/keithprinkey/the_odin_project/google-homepage/WeHL.png" alt="world e hockey">
+</head>
+
