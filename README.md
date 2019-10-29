@@ -1,2 +1,2 @@
 # World-eSports
-Our world esports project
+Our world esports platform Git Repository
