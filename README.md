@@ -19,5 +19,5 @@ Our world esports platform Git Repository
             padding: 3px;
         }
     </style>
-    </head
+    </head>
   
